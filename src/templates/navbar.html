@@ -2,6 +2,9 @@
 {% url 'products:main-products-view' as path_to_performance %}
 {% url 'products:add_purchase_view' as path_to_adding_records %}
 {% url 'csvs:upload-view' as path_to_upload %}
+{% url 'customers:main-customers-view' as path_to_customers %}
+{% url 'products:sales_view' as path_to_sales %}
+
 
 
 
@@ -20,6 +23,16 @@
               Performance<span class="sr-only">(current)</span>
           </a>
       </li>
+      <li class="nav-item">
+        <a class="{% if request.path == path_to_customers %}active{% endif %} nav-link" href="{{ path_to_customers }}">
+            Clientes<span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="{% if request.path == path_to_sales %}active{% endif %} nav-link" href="{{ path_to_sales }}">
+            Ventas<span class="sr-only">(current)</span>
+        </a>
+    </li>
       <li class="nav-item">
           <a class="{% if request.path == path_to_adding_records %}active{% endif %} nav-link" href="{{ path_to_adding_records }}">
               Comprar<span class="sr-only">(current)</span>

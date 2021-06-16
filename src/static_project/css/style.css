@@ -4,3 +4,7 @@ h2 {
   text-align: center;
   padding: 25px !important;
 }
+
+.block-center {
+  text-align: center !important;
+}

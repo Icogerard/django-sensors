@@ -7,7 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('performance/', include('products.urls', namespace='products')),
     path('upload/', include('csvs.urls', namespace='csvs')),
-
+    path('customers/', include('customers.urls', namespace='customers')),
 ]
 
 
