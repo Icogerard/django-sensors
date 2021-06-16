@@ -1,6 +1,8 @@
 {% load static %}
 {% url 'products:main-products-view' as path_to_performance %}
 {% url 'products:add_purchase_view' as path_to_adding_records %}
+{% url 'csvs:upload-view' as path_to_upload %}
+
 
 
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
@@ -22,6 +24,11 @@
           <a class="{% if request.path == path_to_adding_records %}active{% endif %} nav-link" href="{{ path_to_adding_records }}">
               Comprar<span class="sr-only">(current)</span>
           </a>
+      </li>
+      <li class="nav-item">
+        <a class="{% if request.path == path_to_upload %}active{% endif %} nav-link" href="{{ path_to_upload }}">
+            Subir<span class="sr-only">(current)</span>
+        </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Salir</a>

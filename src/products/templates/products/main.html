@@ -2,6 +2,19 @@
 {% block title %} Performance {% endblock %}
 {% block content %}
 
+
+<div class="row">
+  <div class="col">
+      {% if request.POST %}
+          {% if graph %}
+                  <img class="img-fluid" alt="Responsive image" src="data:image/png;base64, {{ graph | safe }}">
+          {% endif %}
+      {% endif %}
+  </div>
+</div>
+
+
+
 <h2>HYDRYUM</h2>
 
 
@@ -114,15 +127,8 @@
 </div>
 
 
-    <div class="row">
-        <div class="col">
-            {% if request.POST %}
-                {% if graph %}
-                        <img class="img-fluid" alt="Responsive image" src="data:image/png;base64, {{ graph | safe }}">
-                {% endif %}
-            {% endif %}
-        </div>
-    </div>
+
+
 
 
 {% endblock %}
