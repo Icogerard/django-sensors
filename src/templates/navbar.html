@@ -1,3 +1,4 @@
+{% load static %}
 {% url 'products:main-products-view' as path_to_performance %}
 {% url 'products:add_purchase_view' as path_to_adding_records %}
 
@@ -7,7 +8,10 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="#">Checked Code</a>
+    
+    <a class="navbar-brand" href="#"><span class="site-heading-lower">
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'img/logo.png' %}" width="40" height="40" alt=""></span>
+    </a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
           <a class="{% if request.path == path_to_performance %}active{% endif %} nav-link" href="{{ path_to_performance }}">
@@ -16,7 +20,7 @@
       </li>
       <li class="nav-item">
           <a class="{% if request.path == path_to_adding_records %}active{% endif %} nav-link" href="{{ path_to_adding_records }}">
-              Sensores<span class="sr-only">(current)</span>
+              Comprar<span class="sr-only">(current)</span>
           </a>
       </li>
       <li class="nav-item">

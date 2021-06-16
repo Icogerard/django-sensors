@@ -2,7 +2,7 @@
 {% block title %} Performance {% endblock %}
 {% block content %}
 
-<h2>Huerto Inteligente</h2>
+<h2>HYDRYUM</h2>
 
 
 <hr>
@@ -21,7 +21,7 @@
     <div class="modal modal-body scrollable" id="Modal_1">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Resumen de compra</h5><br>
+            <h5 class="modal-title" id="exampleModalLabel">Información</h5><br>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -99,10 +99,14 @@
     <hr>
 
 
-    <a href="{% url 'products:add_purchase_view' %}"> <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="">Añadir compra</button></a>
+    <a href="{% url 'products:add_purchase_view' %}"> 
+        <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="">
+            Comprar sensor
+        </button>
+    </a>
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#Modal_1">
-        Resumen
+        Detalles
     </button>
 
 
