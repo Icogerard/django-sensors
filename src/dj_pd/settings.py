@@ -12,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'i=0e@z4oc3*hc+8!u+fwg)@#%-r^sb)kb$y%h^posxtt1qwlm#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -118,3 +118,5 @@ STATIC_ROOT = os.path.join(VENV_PATH, "static_cdn", "static_root")
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(VENV_PATH, "static_cdn", "media_root")
+
+LOGIN_URL = 'login'

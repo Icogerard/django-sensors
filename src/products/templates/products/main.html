@@ -3,11 +3,11 @@
 {% block content %}
 
 
-<div class="row">
-  <div class="col">
+<div class="row justify-content-center">
+  <div class="col text-center">
       {% if request.POST %}
           {% if graph %}
-                  <img class="img-fluid" alt="Responsive image" src="data:image/png;base64, {{ graph | safe }}">
+              <img class="img-fluid" alt="Responsive image" src="data:image/png; base64, {{ graph | safe }}">
           {% endif %}
       {% endif %}
   </div>
@@ -15,7 +15,7 @@
 
 
 
-<h2>HYDRYUM</h2>
+<h2>HYDRYUM | CENTRO DE DATOS</h2>
 
 
 <hr>
